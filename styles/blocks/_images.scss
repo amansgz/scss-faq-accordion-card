@@ -1,0 +1,57 @@
+.img-container {
+    background-image: url(../images/bg-pattern-desktop.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top right;
+    transform: scale(2);
+    width: 270px;
+    height: 500px;
+
+    @media screen and (max-width: 768px) {
+        background-image: url(../images/bg-pattern-mobile.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        margin: -3rem auto;
+        height: 100px;
+        width: 100px;
+    }
+}
+
+.img__woman--mobile {
+    display: none;
+
+    @media screen and (max-width: 768px) {
+        display: block;
+        margin-top: 15px;
+        padding-right: 10px;
+        transform: scale(1.2, 1.2);
+    }
+}
+
+.img__woman--desktop {
+    position: absolute;
+    height: 170px;
+    top: 12.5rem;
+    left: 2rem;
+
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
+}
+
+.img__box--desktop {
+    position: absolute;
+    top: 350px;
+    left: 50px;
+    height: 210px;
+    transition: transform 200ms ease-in-out;
+
+    &--active {
+        transform: translateX(-37px);
+    }
+
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
+}

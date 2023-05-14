@@ -1,0 +1,8 @@
+@mixin gradient($direction, $colors_gradient) {
+    background: linear-gradient($direction, $colors_gradient);
+}
+
+// Transform accordion_icon
+@mixin transform($property) {
+    transform: $property;
+}

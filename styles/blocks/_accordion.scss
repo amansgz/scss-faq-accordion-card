@@ -1,0 +1,116 @@
+.faq-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 6rem 10rem;
+    background-color: $white;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: auto;
+    max-width: 85%;
+    overflow: hidden;
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        margin: 7rem auto;
+        overflow: visible;
+    }
+}
+
+#accordion-container {
+    margin-top: 5rem;
+    padding-bottom: 2rem;
+    width: 50%;
+
+    @media screen and (max-width: 768px) {
+        text-align: center;
+        padding: 0.3rem;
+        padding-bottom: 1.5rem;
+        width: 100%;
+    }
+}
+
+.accordion__title {
+    padding-top: 0.5rem;
+    padding-bottom: 0.7rem;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: $verydark_desaturated_blue;
+
+    @media screen and (max-width: 768px) {
+        text-align: center;
+    }
+}
+
+.accordion__question {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: transparent;
+    border: none;
+    font-size: 1.2rem;
+    text-align: left;
+    border-bottom: 1px solid $light_grayish_blue;
+    width: 90%;
+    color: $verydark_grayish_blue;
+
+    &:after {
+        content: url('/images/icon-arrow-down.svg');
+        float: right;
+        transform: rotate(0);
+        transition: 0.3s;
+    }
+
+    &--active {
+        font-weight: bold;
+        color: $verydark_desaturated_blue;
+        border: none;
+    }
+
+    &--active:after {
+        float: right;
+        transform: rotate(180deg);
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    @media screen and (max-width: 768px) {
+        font-size: 0.8rem;
+        width: 100%;
+    }
+
+    &:hover {
+        @media screen and (min-width: 992px){
+            color: $softred;
+            cursor: pointer;
+        }
+    }
+}
+
+.accordion__answer {
+    display: none;
+    margin-top: 0;
+    padding-right: 2.5rem;
+    padding-left: 0.5rem;
+    font-weight: normal;
+    text-align: left;
+    color: $dark_grayish_blue;
+    transform: max-height 0.3s;
+    border-bottom: 1px solid $light_grayish_blue;
+    width: 90%;
+
+    &--active {
+        display: block;
+        max-height: 300px;
+        line-height: 1.5;
+        overflow: auto;
+        border-bottom: 1px solid $light_grayish_blue;
+        font-size: 1rem;
+
+        @media screen and (max-width: 768px) {
+            margin-right: 0.5rem;
+            font-size: 0.8rem;  
+            width: 100%;
+        }
+    }
+}
