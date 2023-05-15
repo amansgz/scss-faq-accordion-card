@@ -23,7 +23,7 @@
 
     @media screen and (max-width: 768px) {
         text-align: center;
-        padding: 0.3rem;
+        padding: 1rem;
         padding-bottom: 1.5rem;
         width: 100%;
     }
@@ -52,11 +52,15 @@
     width: 90%;
     color: $verydark_grayish_blue;
 
+    &::marker {
+        content: '';
+    }
+
     &:after {
         content: url('/images/icon-arrow-down.svg');
         float: right;
         transform: rotate(0);
-        transition: 0.3s;
+        transition: all 0.3s ease;
     }
 
     &--active {
@@ -75,7 +79,7 @@
     }
 
     @media screen and (max-width: 768px) {
-        font-size: 0.8rem;
+        font-size: .8rem;
         width: 100%;
     }
 
@@ -91,7 +95,6 @@
     display: none;
     margin-top: 0;
     padding-right: 2.5rem;
-    padding-left: 0.5rem;
     font-weight: normal;
     text-align: left;
     color: $dark_grayish_blue;
@@ -104,6 +107,7 @@
         max-height: 300px;
         line-height: 1.5;
         overflow: auto;
+        padding-bottom: 1rem;
         border-bottom: 1px solid $light_grayish_blue;
         font-size: 1rem;
 
