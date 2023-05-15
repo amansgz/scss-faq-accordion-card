@@ -371,7 +371,7 @@ footer {
   max-width: 85%;
   overflow: hidden;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .faq-container {
     flex-direction: column;
     margin: 7rem auto;
@@ -384,7 +384,7 @@ footer {
   padding-bottom: 2rem;
   width: 50%;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   #accordion-container {
     text-align: center;
     padding: 1rem;
@@ -400,7 +400,7 @@ footer {
   font-weight: bolder;
   color: hsl(238, 29%, 16%);
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .accordion__title {
     text-align: center;
   }
@@ -438,7 +438,7 @@ footer {
 .accordion__question:focus {
   outline: none;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .accordion__question {
     font-size: 0.8rem;
     width: 100%;
@@ -471,7 +471,7 @@ footer {
   border-bottom: 1px solid hsl(240, 5%, 91%);
   font-size: 1rem;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .accordion__answer--active {
     margin-right: 0.5rem;
     font-size: 0.8rem;
@@ -488,7 +488,7 @@ footer {
   width: 270px;
   height: 500px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .img-container {
     background-image: url(../images/bg-pattern-mobile.svg);
     background-size: contain;
@@ -503,7 +503,7 @@ footer {
 .img__woman--mobile {
   display: none;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .img__woman--mobile {
     display: block;
     margin-top: 15px;
@@ -518,7 +518,7 @@ footer {
   top: 12.5rem;
   left: 2rem;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .img__woman--desktop {
     display: none;
   }
@@ -534,7 +534,7 @@ footer {
 .img__box--desktop--active {
   transform: translateX(-37px);
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .img__box--desktop {
     display: none;
   }

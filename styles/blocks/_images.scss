@@ -7,7 +7,7 @@
     width: 270px;
     height: 500px;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1024px) {
         background-image: url(../images/bg-pattern-mobile.svg);
         background-size: contain;
         background-repeat: no-repeat;
@@ -21,7 +21,7 @@
 .img__woman--mobile {
     display: none;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1024px) {
         display: block;
         margin-top: 15px;
         padding-right: 10px;
@@ -35,7 +35,7 @@
     top: 12.5rem;
     left: 2rem;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1024px) {
         display: none;
     }
 }
@@ -51,7 +51,7 @@
         transform: translateX(-37px);
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1024px) {
         display: none;
     }
 }
