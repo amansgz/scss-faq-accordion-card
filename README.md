@@ -1,11 +1,4 @@
-# 👩‍💻 Frontend Mentor - FAQ accordion card
-
-[Frontend Mentor challenges](https://www.frontendmentor.io/) help you improve your coding skills by building realistic projects.
-
-This is a solution for [Faq Accordion Card](https://www.frontendmentor.io/challenges/faq-accordion-card-XlyjD0Oam) challenge.
-
-![Design preview for the faq accordion card coding challenge](./images/preview.png)
-
+# 👩‍💻 FAQ accordion card
 
 ## The challenge
 
@@ -23,10 +16,19 @@ Users should be able to:
 - SCSS 
 - Mobile-first workflow
 
-## Live site solution
 
-[Live site](https://scss-faq-accordion-card.netlify.app/) deployed with Netlify.
+<div>
+  <h3>
+    <a href= "https://scss-faq-accordion-card.netlify.app/">
+      Live site
+    </a>
+    <span> | </span>
+    <a href= "https://www.frontendmentor.io/challenges/faq-accordion-card-XlyjD0Oam">
+      Challenge
+    </a>
+  </h3>
+</div>
 
-## Author
+![Design preview for the faq accordion card coding challenge](./images/preview.png)
 
-- Frontend Mentor - [@amansgz](https://www.frontendmentor.io/profile/amansgz)
+This application/site was created as a submission to <a href= "https://www.frontendmentor.io/">Frontend Mentor Challenges</a> 
