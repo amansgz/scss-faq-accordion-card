@@ -1,14 +1,14 @@
 // Style guides
-@import'config/_fonts.scss';
-@import'config/_colors.scss';
+@use'abstracts/fonts.scss';
+@use'abstracts/variables.scss';
+@use'abstracts/breakpoints.scss';
+@use'abstracts/mixins.scss';
 
-// Mixins
-@import 'mixins/_mixins.scss';
 
 // General styles
-@import 'base/_normalize.scss';
-@import 'base/_base.scss';
+@use 'base/normalize.scss';
+@use 'base/base.scss';
 
 // Blocks
-@import 'blocks/_accordion.scss';
-@import 'blocks/_images.scss';
+@use 'blocks/accordion.scss';
+@use 'blocks/images.scss';

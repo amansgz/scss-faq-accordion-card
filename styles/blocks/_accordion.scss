@@ -1,120 +1,127 @@
-.faq-container {
-    display: flex;
-    justify-content: space-between;
-    margin: 6rem 10rem;
-    background-color: $white;
-    border-radius: 20px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    height: auto;
-    max-width: 85%;
-    overflow: hidden;
+@use'../abstracts' as *;
 
-    @media screen and (max-width: 1024px) {
-        flex-direction: column;
-        margin: 7rem auto;
-        overflow: visible;
-    }
+.card {
+	display: grid;
+	justify-items: center;
+	width: 83vw;
+	max-width: 350px;
+	padding: 2rem 0;
+	padding-bottom: 6rem;
+	background-color: $white;
+	border-radius: 20px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	
+
+	@include medium {
+		grid-template-columns: repeat(2, 1fr);
+		width: 75vw;
+		max-width: 730px;
+		height: auto;
+		padding: 0;
+		padding-right: 2rem;
+		background-image: url(../images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 126%;
+    background-position: bottom 40% right -211%;
+	}
+	@include large {
+		padding-right: 4rem;
+		background-position: bottom 40% right -230%;
+	}
 }
 
-#accordion-container {
-    margin-top: 5rem;
-    padding-bottom: 2rem;
-    width: 50%;
+.accordion {
+	margin-top: -6rem;
 
-    @media screen and (max-width: 1024px) {
-        text-align: center;
-        padding: 1rem;
-        padding-bottom: 1.5rem;
-        width: 100%;
-    }
+	@include medium {
+		align-self: flex-start;
+		margin-top: 5rem;
+		margin-bottom: 5rem;
+		text-align: center;
+	}
 }
-
 .accordion__title {
-    padding-top: 0.5rem;
-    padding-bottom: 0.7rem;
-    font-size: 1.5rem;
-    font-weight: bolder;
-    color: $verydark_desaturated_blue;
+	margin-bottom: 3.5rem;
+	font-size: 3rem;
+	font-weight: $font-bold;
+	text-align: center;
+	color: $very-dark-desaturated-blue;
 
-    @media screen and (max-width: 1024px) {
-        text-align: center;
-    }
+	@include medium {
+		margin-bottom: 2.5rem;
+		text-align: left;
+	}
 }
-
+.accordion__item {
+	margin-bottom: 1rem;
+}
 .accordion__question {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    background-color: transparent;
-    border: none;
-    font-size: 1.2rem;
-    text-align: left;
-    border-bottom: 1px solid $light_grayish_blue;
-    width: 90%;
-    color: $verydark_grayish_blue;
+	width: 35ch;
+	padding: 1rem 0 1.5rem;
+	font-size: 1.3rem;
+	text-align: left;
+	color: $very-dark-grayish-blue;
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px solid $light-grayish-blue;
+	position: relative;
 
-    &::marker {
-        content: '';
-    }
+	&::marker {
+		content: '';
+	}
 
-    &:after {
-        content: url('/images/icon-arrow-down.svg');
-        float: right;
-        transform: rotate(0);
-        transition: all 0.3s ease;
-    }
+	&:after {
+		content: url('/images/icon-arrow-down.svg');
+		position: absolute;
+		top: 10px; 
+		right: 0;
+		transform: rotate(0);
+		transition: .3s ease;
+	}
 
-    &--active {
-        font-weight: bold;
-        color: $verydark_desaturated_blue;
-        border: none;
-    }
+	&--active {
+		font-weight: $font-bold;
+		color: $very-dark-desaturated-blue;
+		border: none;
 
-    &--active:after {
-        float: right;
-        transform: rotate(180deg);
-    }
+		&:after {
+			transform: rotate(180deg);
+		}
+	}
+	
+	&:focus {
+		outline: none;
+	}
 
-    &:focus {
-        outline: none;
-    }
-
-    @media screen and (max-width: 1024px) {
-        font-size: .8rem;
-        width: 100%;
-    }
-
-    &:hover {
-        @media screen and (min-width: 992px){
-            color: $softred;
-            cursor: pointer;
-        }
-    }
+ 	&:hover {
+		@include large {
+			color: $soft-red;
+			cursor: pointer;
+		}
+	}
+	@include large {
+		width: 40ch;
+		font-size: 1.5rem;
+	}
 }
 
 .accordion__answer {
-    display: none;
-    margin-top: 0;
-    padding-right: 2.5rem;
-    font-weight: normal;
-    text-align: left;
-    color: $dark_grayish_blue;
-    transform: max-height 0.3s;
-    border-bottom: 1px solid $light_grayish_blue;
-    width: 90%;
+	opacity: 0;
+	width: 32ch;
+	padding-bottom: 1.5rem;
+	font-size: 1.3rem;
+	font-weight: normal;
+	text-align: left;
+	color: $dark-grayish-blue;
+	line-height: 1.5;
+	border-bottom: 1px solid $light-grayish-blue;
+	
+	&--active {
+		opacity: 1;
 
-    &--active {
-        display: block;
-        max-height: 300px;
-        line-height: 1.5;
-        overflow: auto;
-        padding-bottom: 1rem;
-        border-bottom: 1px solid $light_grayish_blue;
-        font-size: 1rem;
-
-        @media screen and (max-width: 1024px) {
-            margin-right: 0.5rem;
-            font-size: 0.8rem;  
-            width: 100%;
-        }
-    }
+		@include large {
+			width: 38ch;
+			font-size: 1.4rem;
+		}
+	}
 }

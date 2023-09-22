@@ -1,37 +1,49 @@
-/* General
------------------------------------------------------------------------------*/
+@use'../abstracts' as *;
+
 html {
-    min-height: 100vh;
+	height: 100%;
+  font-size: 62.5%;
 }
-
 body {
-    font-family: $kumbh_sans, sans-serif;
-    font-size: 12px;
-    @include gradient(to bottom right, $colors_gradient);
+	max-width: 1440px;
+	margin: auto;
+	min-height: 100%;
+  font-family: $font-primary;
+  font-size: 1.6rem;
+
+  @include gradient(to right, $colors-gradient);
 }
-
-footer {
-    margin: 1rem auto;
-
-    @media screen and (min-width: 1200px) {
-        margin: 0.5rem auto;
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: center;
-    }
+/******************************* 
+	SECTION
+/********************************/
+section {
+	padding: 14rem $section-inline-padding;
 }
-
-.attribution { 
-    font-size: 15px;
-    text-align: center; 
-    color: $light_grayish_blue;
-
-    @media screen and (min-width: 1200px) {
-        font-size: 20px;
-    }
+.container {
+	display: grid;
+	place-content: center;
+	max-width: 1100px;
+	margin: auto;
+	height: auto;
+	position: relative;
 }
+/******************************* 
+	FOOTER
+/********************************/
+.footer {
+  margin-top: auto;
+  padding: 2em;
+  text-align: center;
+  color: $very-dark-desaturated-blue;
 
-.attribution a {
-    color: greenyellow;
-    padding-right: 0.5rem;
+	&__attribution a {
+		text-decoration: none;
+		color: $very-dark-desaturated-blue;
+		transition: color .1s ease;
+
+		&:hover,
+		&:focus-visible {
+  	color: $light-grayish-blue;
+		}
+	}
 }

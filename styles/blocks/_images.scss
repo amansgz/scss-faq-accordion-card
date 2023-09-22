@@ -1,57 +1,59 @@
-.img-container {
-    background-image: url(../images/bg-pattern-desktop.svg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top right;
-    transform: scale(2);
-    width: 270px;
-    height: 500px;
+@use "../abstracts" as *;
 
-    @media screen and (max-width: 1024px) {
-        background-image: url(../images/bg-pattern-mobile.svg);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: bottom;
-        margin: -3rem auto;
-        height: 100px;
-        width: 100px;
-    }
+.card__image {
+ 
+  @include medium {
+    justify-self: flex-start;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
 }
-
-.img__woman--mobile {
-    display: none;
-
-    @media screen and (max-width: 1024px) {
-        display: block;
-        margin-top: 15px;
-        padding-right: 10px;
-        transform: scale(1.2, 1.2);
-    }
+.image__container {
+  background-image: url(../images/bg-pattern-mobile.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  width: 225px;
+  transform: translateY(-55%);
+  
+  @include medium {
+    width: 280px;
+    background-image: none;
+    transform: translateY(10%);
+  }
+  @include large {
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+  }
 }
-
-.img__woman--desktop {
+.image__woman img {
+  width: 240px;
+  object-fit: cover;
+  transform: translate(-10%, -8%);
+  
+  @include medium {
+    width: 365px;
+    transform: translate(-26%, 20%);
+  }
+  @include large {
+    width: 360px;
+    transform: translate(-16%, 20%);
+  }  
+}
+/* relative to container */
+.image__box__desktop {  
+  display: none;
+  
+  @include large {
+    display: block;
+    width: 80px;
     position: absolute;
-    height: 170px;
-    top: 12.5rem;
-    left: 2rem;
-
-    @media screen and (max-width: 1024px) {
-        display: none;
-    }
-}
-
-.img__box--desktop {
-    position: absolute;
-    top: 350px;
-    left: 50px;
-    height: 210px;
+    top: 175px;
+    left: 100px;
     transition: transform 200ms ease-in-out;
-
-    &--active {
-        transform: translateX(-37px);
-    }
-
-    @media screen and (max-width: 1024px) {
-        display: none;
-    }
+  }
+  &--active {
+    transform: translateX(-30px);
+  }
 }

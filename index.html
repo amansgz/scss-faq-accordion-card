@@ -1,108 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel=stylesheet href="./styles/style.css">
+  <!-- SCRIPTS -->
   <script src="./js/app.js" defer></script>
+  <!-- STYLES -->
+  <link rel=stylesheet href="./styles/style.css">
   <title>Frontend Mentor | FAQ Accordion Card</title>
 </head>
 
 <body>
   <main>
-    <section class="faq-container">
+    <section>
+      <div class= "container">
+        <div class= "card">
+          <div class= "card__image">
+            <div class= "image__container">
+              <picture class= "image__woman">
+                <source
+                  srcset= "images/illustration-woman-online-mobile.svg"
+                  media= "(max-width: 1279px)"
+                >
+                <img 
+                  src= "images/illustration-woman-online-desktop.svg" 
+                  alt= "woman online">
+              </picture>
+            </div>  
+          </div>
+          
+          <picture class= "image__box__desktop">
+            <img 
+              src= "/images/illustration-box-desktop.svg" 
+              alt= "little box">
+          </picture> 
 
-      <!-- Images container-->
-      <div class="img-container">
-        <img 
-          class="img__woman--mobile" 
-          src="images/illustration-woman-online-mobile.svg"
-          alt="woman stand up front a screen answering clients questions">
-        <img 
-          class="img__woman--desktop" 
-          src="images/illustration-woman-online-desktop.svg"
-          alt="woman stand up front a screen answering clients questions">
-      </div>
-      
-      <div>
-        <img 
-          class="img__box--desktop" 
-          src="/images/illustration-box-desktop.svg" 
-          alt="little box">
-      </div>
+          <div class= "accordion" id= "accordion-container">
+            <h1 class= "accordion__title">
+              FAQ
+            </h1>
 
-      <!-- Accordion container  -->
-      <div id="accordion-container">
-        <h1 class="accordion__title">
-          FAQ
-        </h1>
+            <details class= "accordion__item">
+              <summary class= "accordion__question">
+                How many team members can I invite?
+              </summary>
+              <p class= "accordion__answer">
+                You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.
+              </p>
+            </details>
 
-        <details class="accordion__item">
-          <summary class="accordion__question">
-            How many team members can I invite?
-          </summary>
-          <p class="accordion__answer">
-            You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.
-          </p>
-        </details>
+            <details class= "accordion__item">
+              <summary class= "accordion__question">
+                What is the maximum file upload size?
+              </summary>
+              <p class= "accordion__answer">
+                No more than 2GB. All files in your account must fit your allotted storage
+                space.
+              </p>
+            </details>
 
-        <details class="accordion__item">
-          <summary class="accordion__question">
-            What is the maximum file upload size?
-          </summary>
-          <p class="accordion__answer">
-            No more than 2GB. All files in your account must fit your allotted storage
-            space.
-          </p>
-        </details>
+            <details class= "accordion__item">
+              <summary class= "accordion__question">
+                How do I reset my password?
+              </summary>
+              <p class= "accordion__answer">
+                Click “Forgot password” from the login page or “Change password” from your
+                profile page. A reset link will be emailed to you.
+              </p>
+            </details>
 
-        <details class="accordion__item">
-          <summary class="accordion__question">
-            How do I reset my password?
-          </summary>
-          <p class="accordion__answer">
-            Click “Forgot password” from the login page or “Change password” from your
-            profile page. A reset link will be emailed to you.
-          </p>
-        </details>
+            <details class= "accordion__item">
+              <summary class= "accordion__question">
+                Can I cancel my subscription?
+              </summary>
+              <p class= "accordion__answer">
+                Yes! Send us a message and we’ll process your request no questions asked.
+              </p>
+            </details>
 
-        <details class="accordion__item">
-          <summary class="accordion__question">
-            Can I cancel my subscription?
-          </summary>
-          <p class="accordion__answer">
-            Yes! Send us a message and we’ll process your request no questions asked.
-          </p>
-        </details>
-
-        <details class="accordion__item">
-          <summary class="accordion__question">
-            Do you provide additional support?
-          </summary>
-          <p class="accordion__answer">
-            Chat and email support is available 24/7. Phone lines are open during normal business hours.
-          </p>
-        </details>
+            <details class= "accordion__item">
+              <summary class= "accordion__question">
+                Do you provide additional support?
+              </summary>
+              <p class= "accordion__answer">
+                Chat and email support is available 24/7. Phone lines are open during normal business hours.
+              </p>
+            </details>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <p class="attribution">
+  <footer class= "footer">
+    <small class= "footer__attribution">
       Challenge by 
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
-        Frontend Mentor.
-      </a>
-    </p>
-    <p class="attribution"> 
+      <a href= "https://www.frontendmentor.io?ref=challenge" 
+        target= "_blank">
+        Frontend Mentor
+      </a><br>
       Coded by 
-      <a href="https://github.com/amansgz/scss-faq-accordion-card"
-        target="_blank">
-        Aman
+      <a href= "https://github.com/amansgz"
+        target= "_blank">
+        @amansgz
       </a>
-    </p>
+    </small>
   </footer>
 </body>
 </html>

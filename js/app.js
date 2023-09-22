@@ -1,4 +1,6 @@
 const accordion = document.getElementById('accordion-container');
+const box = document.querySelector(".image__box__desktop");
+
 
 accordion.addEventListener('click', e => {
     const targetClass = e.target.classList;
@@ -9,10 +11,11 @@ accordion.addEventListener('click', e => {
     }
 });
 
-document.getElementById("accordion-container").addEventListener("mouseover", () => {
-  document.querySelector(".img__box--desktop").classList.add("img__box--desktop--active");
+/* Move box image  */
+accordion.addEventListener("mouseover", () => {
+  box.classList.add("image__box__desktop--active");
 })
 
-document.getElementById("accordion-container").addEventListener("mouseout", () => {
-  document.querySelector(".img__box--desktop").classList.remove("img__box--desktop--active");     
+accordion.addEventListener("mouseout", () => {
+  box.classList.remove("image__box__desktop--active");
 });
